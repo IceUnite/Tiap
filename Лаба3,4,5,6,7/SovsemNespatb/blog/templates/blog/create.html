@@ -1,0 +1,15 @@
+{% extends "blog/header.html" %}
+
+{% block title %} Написать статью {% endblock %}
+
+{% block data %}
+	 <div class="content">
+		 <h1>Написать статью</h1>
+		 <form method="POST">{% csrf_token %}
+			 <input type="text" name="title" placeholder="Название статьи" value="{{ form.title }}"><br>
+			 <textarea name="text" placeholder="Текст статьи">{{ form.text }}</textarea>
+			 <input type="submit" value="Сохранить">
+		 </form>
+		 {{ form.errors }}
+	 </div>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "blog/header.html" %}
+
+{% block title %} Расписание - Главная {% endblock %}
+
+  {% block data %}
+      <header>
+         <h1>Django public blog</h1>
+      </header>
+      {% for post in posts %}
+         <div class="post">
+            <h1><a href="{% url 'kaknespatb' pk=post.id %}">{{post.title}}</a></h1>
+            <p class="fold-button">Свернуть</p>
+            <div class="post-about">
+               <p>{{post.author}}</p>
+               <p>{{post.create}}</p>
+            </div>
+            <div class="post-text">
+               {{post.text}}
+            </div>
+         </div>
+      {% endfor %}
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script>
+         $(".post-text").text(function(i, text) {
+
+           if (text.length >= 140) {
+             text = text.substring(0, 140);
+             var lastIndex = text.lastIndexOf(" ");
+             text = text.substring(0, lastIndex) + '...'; 
+           }
+           
+           $(this).text(text);
+           
+         });
+      </script>
+      <style>
+        .fold-button {
+          cursor: pointer;
+          text-align: right;
+        }
+      </style>
+      <script>
+          $(document).ready(function() {
+              $(".fold-button").click(function() {
+                  $(this).siblings('.post-about, .post-text').slideToggle(500);
+                  if ($(this).html() == "Свернуть") {
+                      $(this).html("Развернуть");
+                  }
+                  else if ($(this).html() == "Развернуть") {
+                      $(this).html("Свернуть");
+                  }
+              })
+          })
+      </script>
+  {% endblock %}

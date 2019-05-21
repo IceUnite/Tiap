@@ -1,0 +1,22 @@
+{% extends "blog/header.html" %}
+
+{% block data %}
+
+	<div class="container">
+		<div class="flex-wrap">
+			<form class="login" method="POST">
+				
+				{% csrf_token %}
+				{{form}}
+
+				<button href="#">Войти</button>
+
+				{% if messages %}
+					{% for mes in messages %}
+						<p>{{ mes }}</p>
+					{% endfor %}
+				{% endif %}
+			</form>
+		</div>
+	</div>
+{% endblock %}

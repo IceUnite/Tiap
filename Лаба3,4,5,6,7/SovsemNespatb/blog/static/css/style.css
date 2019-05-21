@@ -1,0 +1,99 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	padding: 30px;
+
+	background-color: #1abc9c;
+	font-family: Tahoma, Arial, sans-serif;
+	color: #ffffff;
+}
+header {
+  text-align: center;
+}
+header h1 {
+  display: inline;
+  background-color: #156759;
+  border-radius: 15px;
+  padding: 10px;
+
+  text-align: center;
+}
+
+a {
+  color: white;
+}
+
+.menu {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px dashed #156759;
+  margin-top: -30px;
+  margin-bottom: 30px;
+
+}
+.menu nav {
+  flex-grow: 1;
+  text-align: right;
+}
+.menu a {
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.post {
+  margin-top: 10px;
+}
+
+.post h1 {
+	padding-top: 15px;
+}
+
+.post-about {
+  display: flex;
+  padding-top: 10px;
+}
+.post-about p  {
+  font-size: 14px;
+}
+.post-about p:last-child, .post-about div:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+.post-text {
+  padding-top: 20px;
+}
+
+form {
+  margin-top: 20px;
+  width: 250px;
+}
+form input, label {
+  display: block;
+}
+
+form input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+form label {
+  padding: 5px 0;
+  font-size: 18px;
+}
+
+form button, input[type="submit"] {
+  width:100%;
+  background-color:#156757;
+  border-radius:2px;
+  color:#fff;
+  margin-top: 10px;
+  text-align:center;
+  border-color:#007bff;
+  padding: 15px;
+}
