@@ -1,0 +1,21 @@
+{% extends "app/header.html" %}
+
+{% block data %}
+
+	<div class="flex-wrap">
+		<form class="reg" method="POST">
+
+			{% csrf_token %}
+			{{form.as_p}}
+
+			<button type="submit">Регистрация</button>
+		</form>
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$('ul, span').remove();
+</script>
+
+{% endblock %}

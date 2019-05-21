@@ -1,0 +1,29 @@
+{% extends "app/header.html" %}
+
+{% block title %} Расписание {% endblock %}
+
+	{% block data %}
+		<div class="container">
+			<div class="flex-wrap">
+				{% for post in object_list %}
+					<div class="day">
+						<div class="day-week">
+							{{post.title}}
+						</div>
+						<div class="day-info">
+							<p><time>{{post.time1}}</time>{{post.lesson1}}<br><span>Преподаватель: {{post.teacher1}}</span></p>
+							<p><time>{{post.time2}}</time>{{post.lesson2}}<br><span>Преподаватель: {{post.teacher2}}</span></p>
+							<p><time>{{post.time3}}</time>{{post.lesson3}}<br><span>Преподаватель: {{post.teacher3}}</span></p>
+							<p><time>{{post.time4}}</time>{{post.lesson4}}<br><span>Преподаватель: {{post.teacher4}}</span></p>
+							<p><time>{{post.time5}}</time>{{post.lesson5}}<br><span>Преподаватель: {{post.teacher5}}</span></p>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$('p:contains("None")').remove();
+		</script>
+
+	{% endblock %}

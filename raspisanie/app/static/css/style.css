@@ -1,0 +1,106 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	color: #111;
+	padding: 0 30px;
+	font-size: 18px;
+}
+header {
+	height: 80px;
+	display: flex;
+	align-items: center;
+	font-family: Segoe UI;
+	border-bottom: 2px dashed #333;
+}
+
+a {
+	text-decoration: none;
+	color: #111;
+}
+
+nav {
+	flex-grow: 1;
+	text-align: right;
+}
+
+nav a {
+	margin-right: 10px;
+}
+
+nav a:hover {
+	color: maroon;
+}
+
+nav a:last-child {
+	margin-right: 0;
+}
+
+.flex-wrap {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.day {
+	width: 380px;
+	margin: 30px 30px 30px 0;
+	padding: 5px 15px 15px 15px;
+	background-color: yellow;
+	font-family: Segoe UI;
+}
+
+.day .day-week {
+	padding: 10px 0;
+	border-bottom: 1px solid #111;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.day .day-info p {
+	padding: 5px;
+	border-bottom: 1px dashed #111;
+}
+
+.day .day-info p:first-child {
+	padding-top: 15px;
+}
+
+.day .day-info time {
+	padding-right: 30px;
+}
+
+.day .day-info p span {
+	padding-top: 15px;
+}
+
+form {
+	margin-top: 20px;
+	width: 250px;
+}
+form input, label {
+	display: block;
+}
+
+form input {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 3px;
+	border-radius: 3px;
+}
+
+form label {
+	padding: 5px 0;
+	font-size: 18px;
+}
+
+form button, input[type="submit"] {
+	width:100%;
+	background-color:#156757;
+	border-radius:2px;
+	color:#fff;
+	margin-top: 10px;
+	text-align:center;
+	border-color:#007bff;
+	padding: 15px;
+}

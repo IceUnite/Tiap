@@ -1,0 +1,11 @@
+{% extends "app/header.html" %}
+
+{% block title %} Подождите... {% endblock %}
+
+{% block data %}
+	<script>
+		setTimeout(function(){
+		  window.location.href = '/';
+		}, 0);
+	</script>
+{% endblock %}
